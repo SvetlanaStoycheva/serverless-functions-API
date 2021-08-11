@@ -3,6 +3,9 @@ const flights = require('../assets/data-2');
 
 exports.handler = async (event, context) => {
   return {
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
     statusCode: 200,
     body: JSON.stringify(flights),
   };
