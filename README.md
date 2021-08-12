@@ -9,7 +9,7 @@
   - To use the API in different apps which are not on the server: we need to add headers:{'Access-Control-Allow-Origin': '\*'} in the serverless function
 - 3-airtable. Airtable is a relational database tool that's also an online collaboration tool. You can use it to manage work, track and organize inventories, plan an event. We are going to use graphical interface Airtable to store, access and modify our data.
 
-  - Using .env file for airtable api key. Dealing with .env in Netlify
+  - Using .env file for airtable api key. Dealing with .env files in Netlify: After we put some of our data as api key in .env file, we need to deal with it in Netlify, in order to allow the site to use them and display our website. So, in the website page => domain settings => built&deploy => (bottom of the page) Enviroment => edit variables => type in the key/value pair => save => push to github
   - Setup our data in airtable. Using additional airtable-node library to setup 3-airtable surverless function. Fetch our data from the serverless function api and display it. When we click on specific product (every product is setup as a link), we navigate to a page href="product.html?id=\${id}, take the id from the url, fetch data with this id, which containes more info about the specific single product.
 
 - s
