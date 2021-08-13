@@ -14,22 +14,34 @@ exports.handler = async (event, context) => {
       //   console.log(product);
       if (product.error) {
         return {
+          headers: {
+            'Access-Control-Allow-Origin': '*',
+          },
           statusCode: 404,
           body: `No product with id ${id}`,
         };
       }
       return {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
         statusCode: 200,
         body: JSON.stringify(product),
       };
     } catch (error) {
       return {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
         statusCode: 500,
         body: `Server error`,
       };
     }
   }
   return {
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
     statusCode: 400,
     body: 'Please provide product id',
   };

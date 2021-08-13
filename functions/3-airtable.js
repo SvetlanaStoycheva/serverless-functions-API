@@ -5,7 +5,18 @@ const airtable = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY })
   .base('appvPTX24U58jQD9N')
   .table('products');
 
+// exports.handler = async (event, context) => {
+//   return {
+//     headers: {
+//       'Access-Control-Allow-Origin': '*',
+//     },
+//     statusCode: 200,
+//     body: JSON.stringify(flights),
+//   };
+// };
+
 exports.handler = async (event, context) => {
+  //http://localhost:8888/api/3-airtable
   try {
     const { records } = await airtable.list();
     console.log(records);
@@ -16,11 +27,17 @@ exports.handler = async (event, context) => {
       return { id, name, url, price };
     });
     return {
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+      },
       statusCode: 200,
       body: JSON.stringify(products),
     };
   } catch (error) {
     return {
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+      },
       statusCode: 500,
       body: 'Server Error',
     };
