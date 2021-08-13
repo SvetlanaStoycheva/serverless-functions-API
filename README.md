@@ -5,7 +5,6 @@
 - Setup Netlify .toml file in the root, where we tell Netlify where the fuctions are located; create a function folder with the first function. Every time we create a new function, we have to stop the server (control C) and then run: npm run netlify; write in the url: localhost:8888/.netlify/functions/1-hello or (after the redirect) localhost:8888/api/1-hello . This is the address of our api with our data.
 - 2-basic-api: for few minutes we created our own api with my flights data for your-seat-to-space app. Api address localhost:8888/api/2-basic-api. We dropped the flight data in the serverless function, we pass it to JSON.stringify. Then we connected to our front-end, iterated over our data and displayed it.
   - Deployment on Netlify: new site from git => github=> deploy site; We can check our functions from the netlify navbar menu Functions.
-  - After deployment api is at https://sweta-serverless-functions.netlify.app/api/2-basic-api
   - To use the API in different apps which are not on the server: we need to add headers:{'Access-Control-Allow-Origin': '\*'} in the serverless function
 - 3-airtable. Airtable is a relational database tool that's also an online collaboration tool. You can use it to manage work, track, and organize inventories, plan an event. We are going to use graphical interface Airtable to store, access and modify our data.
 

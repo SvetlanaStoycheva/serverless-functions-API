@@ -1,4 +1,5 @@
 const result = document.querySelector('.result');
+//API URL after deployment on Netlify: https://sweta-serverless-functions.netlify.app/api/2-basic-api
 
 const fetchData = async () => {
   try {

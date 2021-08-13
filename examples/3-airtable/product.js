@@ -1,4 +1,6 @@
 const result = document.querySelector('.result');
+//API URL after deployment on Netlify:https://sweta-serverless-functions.netlify.app/.netlify/functions/3-product?id=rec6BOR7HhPY2V4lk
+
 //'/api/3-product?id=${id}'
 
 const fetchProduct = async () => {

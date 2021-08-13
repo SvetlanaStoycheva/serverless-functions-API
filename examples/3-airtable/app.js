@@ -1,4 +1,5 @@
 const result = document.querySelector('.result');
+//API URL after deployment on Netlify: https://sweta-serverless-functions.netlify.app/.netlify/functions/3-airtable
 
 const fetchProducts = async () => {
   try {
