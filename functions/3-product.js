@@ -1,5 +1,6 @@
 require('dotenv').config();
 const Airtable = require('airtable-node');
+//API URL after deployment on Netlify:https://sweta-serverless-functions.netlify.app/.netlify/functions/3-product?id=rec6BOR7HhPY2V4lk
 
 const airtable = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY })
   .base('appvPTX24U58jQD9N')

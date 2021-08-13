@@ -1,19 +1,10 @@
 require('dotenv').config();
 const Airtable = require('airtable-node');
+//API URL after deployment on Netlify: https://sweta-serverless-functions.netlify.app/.netlify/functions/3-airtable
 
 const airtable = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY })
   .base('appvPTX24U58jQD9N')
   .table('products');
-
-// exports.handler = async (event, context) => {
-//   return {
-//     headers: {
-//       'Access-Control-Allow-Origin': '*',
-//     },
-//     statusCode: 200,
-//     body: JSON.stringify(flights),
-//   };
-// };
 
 exports.handler = async (event, context) => {
   //http://localhost:8888/api/3-airtable
