@@ -13,9 +13,9 @@ exports.handler = async (event, context) => {
     console.log(records);
     const products = records.map((product) => {
       const { id } = product;
-      const { name, image, price, occasion } = product.fields;
+      const { name, image, price, occasion, featured } = product.fields;
       const url = image[0].url;
-      return { id, name, url, price, occasion };
+      return { id, name, url, price, occasion, featured };
     });
     return {
       headers: {
